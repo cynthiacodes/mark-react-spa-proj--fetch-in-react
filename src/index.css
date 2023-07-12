@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.dogGrid{
+  display: grid; 
+  justify-content: center; 
+  grid-template-areas: 
+    ". t ."
+    ". p ."
+    ". i ."
+    ". b .";
+  
+}
+
+.button{
+  grid-area: b;
+}
+
+.image{
+  grid-area: i;
+  position: relative;
+
+}
+
+.title{
+  grid-area: t;
+}
+
+.paragraph{
+  grid-area: p;
+}
