@@ -14,8 +14,8 @@ function DogApp() {
   };
 
   return (
-    <div className="dogGrid">
-      <h1 className="title">Dog app</h1>
+    <div>
+      <h1>Dog app</h1>
       {dog && (
         <>
           <img className = "image"src={dog.message} alt="" />
@@ -25,12 +25,12 @@ function DogApp() {
       )}
       {!dog && (
         <>
-          <p className="paragraph">
+          <p>
             Click the button to trigger a <code>fetch</code> that gets a random
             dog picture from an API!
           </p>
           <hr />
-          <button className = "button"onClick={handleGetPicture}>Get picture</button>
+          <button onClick={handleGetPicture}>Get picture</button>
         </>
       )}
     </div>

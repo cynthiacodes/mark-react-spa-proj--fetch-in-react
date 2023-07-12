@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:#f9cdad;
 }
 
 code {
@@ -12,31 +13,18 @@ code {
     monospace;
 }
 
-.dogGrid{
-  display: grid; 
-  justify-content: center; 
-  grid-template-areas: 
-    ". t ."
-    ". p ."
-    ". i ."
-    ". b .";
-  
+img {
+  border: 1px solid #fdfcfc;
+  border-radius: 4px;
+  padding: 5px;
+  width: 200px;
 }
 
-.button{
-  grid-area: b;
+image{
+  object-fit: cover;
 }
 
-.image{
-  grid-area: i;
-  position: relative;
 
-}
-
-.title{
-  grid-area: t;
-}
-
-.paragraph{
-  grid-area: p;
+h1{
+  color: #83af9b;
 }
