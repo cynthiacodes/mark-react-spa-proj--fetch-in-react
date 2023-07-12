@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import DogApp from "./DogApp";
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <DogApp/>
   </React.StrictMode>,
   document.getElementById("root")
 );

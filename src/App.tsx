@@ -37,7 +37,7 @@ function App() {
       </div>
     );
   } else {
-    return (
+    return (    
       <div>
         <h1>Joke app</h1>
         <p>
