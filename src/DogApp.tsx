@@ -6,12 +6,24 @@ interface Dog {
 
 function DogApp() {
   const [dog, setDog] = useState<Dog>();
+  const [storePicture, setStorePicture] = useState<{message:string}[]>([]);
 
   const handleGetPicture = async () => {
     const response = await fetch("https://dog.ceo/api/breeds/image/random");
     const jsonBody:{message:string} = await response.json();
     setDog(jsonBody);
+    if (dog) {
+      setStorePicture(prevValue => [...prevValue, dog]);
+    }
   };
+
+
+  const listDogPic = storePicture.map((object,index)=> (
+    <li key = {index}><img src={object.message} alt="" /></li>
+  ));
+
+
+
 
   return (
     <div>
@@ -21,6 +33,8 @@ function DogApp() {
           <img className = "image"src={dog.message} alt="" />
           <hr />
           <button onClick={handleGetPicture}>Get another picture</button>
+          <hr />
+          <ul>{listDogPic}</ul>
         </>
       )}
       {!dog && (
